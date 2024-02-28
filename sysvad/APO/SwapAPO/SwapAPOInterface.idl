@@ -28,3 +28,4 @@ interface ISwapAPOMFX : IUnknown
 interface ISwapAPOSFX : IUnknown
 {
 };
+

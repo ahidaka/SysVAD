@@ -8,8 +8,8 @@ Copyright (c) Microsoft Corporation. All Rights Reserved
 #define VER_FILETYPE                    VFT_DLL
 #define VER_FILESUBTYPE                 VFT_UNKNOWN
 #define VER_FILEDESCRIPTION_STR         "Swap APO"
-#define VER_INTERNALNAME_STR            "SwapAPO"
-#define VER_ORIGINALFILENAME_STR        "SwapAPO.Dll"
+#define VER_INTERNALNAME_STR            "SWAPAPODll"
+#define VER_ORIGINALFILENAME_STR        "SwapAPODll.Dll"
 #include <Common.ver>
 
 IDR_SWAPAPODLL          REGISTRY                "SwapAPODll.rgs"
@@ -17,8 +17,8 @@ IDR_SWAPAPOMFX          REGISTRY                "SwapAPOMFX.rgs"
 IDR_SWAPAPOSFX          REGISTRY                "SwapAPOSFX.rgs"
 
 // ICON
-IDI_EFFECT_ICON			RCDATA					"SwapAPO.png"
+IDI_EFFECT_ICON			RCDATA					"SwapApo.png"
 
-#if 0
+#if 1
 1                       TYPELIB                 "SwapAPODll.tlb"
 #endif

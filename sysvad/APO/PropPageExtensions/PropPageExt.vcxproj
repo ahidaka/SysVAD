@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,20 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8851ab85-70b3-4798-a149-ba366df9ec25}</ProjectGuid>
+    <ProjectGuid>{CA5630B1-AE8D-4FCB-ACB2-75BD9948494C}</ProjectGuid>
     <RootNamespace>$(MSBuildProjectName)</RootNamespace>
     <SupportsPackaging>false</SupportsPackaging>
     <RequiresPackageProject>true</RequiresPackageProject>
     <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
     <Platform Condition="'$(Platform)' == ''">Win32</Platform>
-    <SampleGuid>{D5CCDCB1-348E-414E-BB0F-33C773760034}</SampleGuid>
+    <SampleGuid>{025DDC98-E8D3-43AF-862D-3FDA9A8432E9}</SampleGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetVersion>Windows10</TargetVersion>
     <UseDebugLibraries>False</UseDebugLibraries>
     <DriverTargetPlatform>Desktop</DriverTargetPlatform>
-    <EmbedManifest>false</EmbedManifest>
     <DriverType />
     <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -41,7 +40,6 @@
     <TargetVersion>Windows10</TargetVersion>
     <UseDebugLibraries>True</UseDebugLibraries>
     <DriverTargetPlatform>Desktop</DriverTargetPlatform>
-    <EmbedManifest>false</EmbedManifest>
     <DriverType />
     <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -50,7 +48,6 @@
     <TargetVersion>Windows10</TargetVersion>
     <UseDebugLibraries>False</UseDebugLibraries>
     <DriverTargetPlatform>Desktop</DriverTargetPlatform>
-    <EmbedManifest>false</EmbedManifest>
     <DriverType />
     <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -59,7 +56,6 @@
     <TargetVersion>Windows10</TargetVersion>
     <UseDebugLibraries>True</UseDebugLibraries>
     <DriverTargetPlatform>Desktop</DriverTargetPlatform>
-    <EmbedManifest>false</EmbedManifest>
     <DriverType />
     <PlatformToolset>WindowsApplicationForDrivers10.0</PlatformToolset>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -82,161 +78,186 @@
   </ImportGroup>
   <ItemGroup Label="WrappedTaskItems" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>DelayAPO</TargetName>
+    <TargetName>PropPageExt</TargetName>
+    <UseOfAtl>Dynamic</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>DelayAPO</TargetName>
+    <TargetName>PropPageExt</TargetName>
+    <UseOfAtl>Dynamic</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>DelayAPO</TargetName>
+    <TargetName>PropPageExt</TargetName>
+    <UseOfAtl>Dynamic</UseOfAtl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>DelayAPO</TargetName>
+    <TargetName>PropPageExt</TargetName>
+    <UseOfAtl>Dynamic</UseOfAtl>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
     <Link>
       <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
     <Link>
       <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
     <Link>
       <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
     <Link>
       <EntryPointSymbol Condition="'$(Platform)'=='win32'">_DllMainCRTStartup@12</EntryPointSymbol>
       <EntryPointSymbol Condition="'$(Platform)'!='win32'">_DllMainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <UseOfAtl>Dynamic</UseOfAtl>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <UseOfAtl>Dynamic</UseOfAtl>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <UseOfAtl>Dynamic</UseOfAtl>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <UseOfAtl>Dynamic</UseOfAtl>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\;.;</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <RuntimeLibrary />
-      <AdditionalOptions> /Wv:18 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /wd4127 /Wv:18</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH);.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;AudioBaseProcessingObjectV140.lib;audiomediatypecrt.lib;AudioEng.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>DelayAPODll.def</ModuleDefinitionFile>
-      <AdditionalOptions>/ignore:4217,4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies);advapi32.lib;kernel32.lib;user32.lib;ole32.lib;oleaut32.lib;uuid.lib;shlwapi.lib;comctl32.lib;rpcrt4.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>PropPageExt.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\;.;</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <RuntimeLibrary />
-      <AdditionalOptions> /Wv:18 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /wd4127 /Wv:18</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH);.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;AudioBaseProcessingObjectV140.lib;audiomediatypecrt.lib;AudioEng.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>DelayAPODll.def</ModuleDefinitionFile>
-      <AdditionalOptions>/ignore:4217,4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies);advapi32.lib;kernel32.lib;user32.lib;ole32.lib;oleaut32.lib;uuid.lib;shlwapi.lib;comctl32.lib;rpcrt4.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>PropPageExt.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\;.;</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <RuntimeLibrary />
-      <AdditionalOptions> /Wv:18 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /wd4127 /Wv:18</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH);.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;AudioBaseProcessingObjectV140.lib;audiomediatypecrt.lib;AudioEng.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>DelayAPODll.def</ModuleDefinitionFile>
-      <AdditionalOptions>/ignore:4217,4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies);advapi32.lib;kernel32.lib;user32.lib;ole32.lib;oleaut32.lib;uuid.lib;shlwapi.lib;comctl32.lib;rpcrt4.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>PropPageExt.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\;.;</AdditionalIncludeDirectories>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <RuntimeLibrary />
-      <AdditionalOptions> /Wv:18 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /wd4127 /Wv:18</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH);.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);_WINDLL;_USRDLL;UNICODE;_UNICODE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(DDK_INC_PATH);..\inc;..\..\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UNICODE;_UNICODE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\Inc;$(DDK_INC_PATH)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);Kernel32.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;uuid.lib;AudioBaseProcessingObjectV140.lib;audiomediatypecrt.lib;AudioEng.lib</AdditionalDependencies>
-      <ModuleDefinitionFile>DelayAPODll.def</ModuleDefinitionFile>
-      <AdditionalOptions>/ignore:4217,4049 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies);advapi32.lib;kernel32.lib;user32.lib;ole32.lib;oleaut32.lib;uuid.lib;shlwapi.lib;comctl32.lib;rpcrt4.lib</AdditionalDependencies>
+      <ModuleDefinitionFile>PropPageExt.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Delay.cpp" />
-    <ClCompile Include="DelayAPODll.cpp" />
-    <ClCompile Include="DelayAPOMFX.cpp	" />
-    <ClCompile Include="DelayAPOSFX.cpp" />
-    <Midl Include="DelayAPODll.idl" />
-    <Midl Include="DelayAPOInterface.idl" />
-    <ResourceCompile Include="DelayAPODll.rc" />
+    <ClCompile Include="AdvEndpointPropPage.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="CplExt.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="Parts.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Create</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="SwapPropPage.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="TopologyExaminers.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="UIWidgets.cpp">
+      <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreCompiledHeaderFile>stdafx.h</PreCompiledHeaderFile>
+      <PreCompiledHeader>Use</PreCompiledHeader>
+      <PreCompiledHeaderOutputFile>$(IntDir)\stdafx.pch</PreCompiledHeaderOutputFile>
+    </ClCompile>
+    <Midl Include="CplExt.idl" />
+    <ResourceCompile Include="CplExt.rc" />
   </ItemGroup>
   <ItemGroup>
     <Inf Exclude="@(Inf)" Include="*.inf" />
